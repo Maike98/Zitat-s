@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batman - Filmzitat-Rätsel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #666;
+            font-size: 1.2em;
+        }
+        .quote {
+            font-size: 1.5em;
+            font-style: italic;
+            color: #444;
+            margin: 20px 0;
+        }
+        .hidden {
+            display: none;
+            font-size: 1.2em;
+            margin: 20px 0;
+            color: #333;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        button.tip {
+            background-color: #007BFF;
+            color: white;
+        }
+        button.tip:hover {
+            background-color: #0056b3;
+        }
+        button.solution {
+            background-color: #28a745;
+            color: white;
+        }
+        button.solution:hover {
+            background-color: #1e7e34;
+        }
+    </style>
+    <script>
+        function showTip() {
+            document.getElementById("tip").style.display = "block";
+        }
+
+        function showSolution() {
+            document.getElementById("solution").style.display = "block";
+        }
+    </script>
+</head>
+<body>
+    <h1>Bastis Geburtstagsrätsel</h1>
+    <h2>Errate den Film anhand des Filmzitats!</h2>
+
+    <p class="quote">"Die großen Könige der Vergangenheit blicken von den Sternen auf uns herab."</p>
+
+    <button class="tip" onclick="showTip()">Tipp anzeigen</button>
+    <p id="tip" class="hidden">Ein König wächst in der Savanne heran, begleitet von Freunden mit einem sorglosen Motto.</p>
+
+    <button class="solution" onclick="showSolution()">Korrekte Antwort?</button>
+    <p id="solution" class="hidden">Drehe den QR-Code um und lege ihn auf Platz 3 auf dem Feld.</p>
+</body>
+</html>
