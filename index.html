@@ -86,8 +86,8 @@
                 message.innerHTML = `<span class="wrong">Leider falsch, versuch es noch einmal.</span>`;
             }
         }
-        function showTip(id) {
-            document.getElementById(id).style.display = "block";
+        function showTip() {
+            document.getElementById("tip").style.display = "block";
         }
     </script>
 </head>
@@ -97,14 +97,13 @@
 
     <p class="quote">"Die großen Könige der Vergangenheit blicken von den Sternen auf uns herab."</p>
 
-        <input type="text" id="answer" placeholder="Filmtitel eingeben">
-        <button class="answer" onclick="checkAnswer()">Antwort prüfen</button>
+    <input type="text" id="answer" placeholder="Filmtitel eingeben">
+    <button class="answer" onclick="checkAnswer()">Antwort prüfen</button>
     <p id="message"></p>
     
     <div>
-        <button onclick="showTip()">Tipp</button>
+        <button class="tip" onclick="showTip()">Tipp anzeigen</button>
         <p id="tip" class="tip">Ein König wächst in der Savanne heran, begleitet von Freunden mit einem sorglosen Motto.</p>
     </div>
-
 </body>
 </html>
