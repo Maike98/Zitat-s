@@ -30,7 +30,6 @@
             font-size: 1em;
             border: 1px solid #ccc;
             border-radius: 5px;
-            box-sizing: border-box;
             width: calc(100% - 40px);
             max-width: 300px;
         }
@@ -70,7 +69,7 @@
         .tip {
             display: none;
             margin-top: 10px;
-            font-size: 1.2em;
+            font-size: 1.3em; /* Größere Schrift für den Tipp */
             color: #333;
         }
     </style>
@@ -87,7 +86,8 @@
             }
         }
         function showTip() {
-            document.getElementById("tip").style.display = "block";
+            const tip = document.getElementById("tip");
+            tip.style.display = "block";
         }
     </script>
 </head>
@@ -97,10 +97,14 @@
 
     <p class="quote">"Die großen Könige der Vergangenheit blicken von den Sternen auf uns herab."</p>
 
-    <input type="text" id="answer" placeholder="Filmtitel eingeben">
-    <button class="answer" onclick="checkAnswer()">Antwort prüfen</button>
+    <!-- Eingabefeld -->
+    <div>
+        <input type="text" id="answer" placeholder="Filmtitel eingeben">
+        <button class="answer" onclick="checkAnswer()">Antwort prüfen</button>
+    </div>
     <p id="message"></p>
     
+    <!-- Tipp-Button -->
     <div>
         <button class="tip" onclick="showTip()">Tipp anzeigen</button>
         <p id="tip" class="tip">Ein König wächst in der Savanne heran, begleitet von Freunden mit einem sorglosen Motto.</p>
